@@ -13,7 +13,17 @@
 // ZADANIE 1
 //CreatePerson();
 // ZADANIE 2
-CreateBankAccount();
+//CreateBankAccount();
+// dziedziczenie
+Dziedziczenie();
+
+void Dziedziczenie()
+{
+    Student student = new Student("Kamil", "Pawlak", 21, "w69831");
+    student.View();
+    student.ViewStudent();
+}
+
 static void CreatePerson()
 {
     Console.WriteLine("Podaj imię: ");

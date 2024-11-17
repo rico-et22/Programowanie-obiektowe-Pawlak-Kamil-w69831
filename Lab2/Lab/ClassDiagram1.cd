@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lab2.Osoba">
+    <Position X="17" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABAQAAAAEAAAAAAAAABAAAAAAAACAAAAAg=</HashCode>
+      <FileName>Osoba.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab2.Student">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
