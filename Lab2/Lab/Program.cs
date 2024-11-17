@@ -15,14 +15,17 @@
 // ZADANIE 2
 //CreateBankAccount();
 // dziedziczenie
-Dziedziczenie();
+//Dziedziczenie();
 
-void Dziedziczenie()
-{
-    Student student = new Student("Kamil", "Pawlak", 21, "w69831");
-    student.View();
-    student.ViewStudent();
-}
+//void Dziedziczenie()
+//{
+//    Student student = new Student("Kamil", "Pawlak", 21, "w69831");
+//    student.View();
+//    student.ViewStudent();
+//}
+
+// ZADANIE 3
+CreateStudent();
 
 static void CreatePerson()
 {
@@ -44,4 +47,12 @@ static void CreateBankAccount()
     konto.Wyplata(200);
     konto.View();
     Console.WriteLine($"Saldo: {konto.Saldo}");
+}
+
+static void CreateStudent()
+{
+    Student student = new Student("Kamil", "Pawlak");
+    student.DodajOcene(4.5);
+    student.DodajOcene(3);
+    Console.WriteLine(student.SredniaOcen);
 }
