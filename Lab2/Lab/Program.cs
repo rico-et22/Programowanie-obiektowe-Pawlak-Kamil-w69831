@@ -25,34 +25,54 @@
 //}
 
 // ZADANIE 3
-CreateStudent();
+//CreateStudent();
 
-static void CreatePerson()
-{
-    Console.WriteLine("Podaj imię: ");
-    string firstName = Console.ReadLine();
-    Console.WriteLine("Podaj nazwisko: ");
-    string lastName = Console.ReadLine();
-    Console.WriteLine("Podaj wiek: ");
-    int age = int.Parse(Console.ReadLine());
-    Osoba osoba=new Osoba(firstName, lastName, age);
-    osoba.View();
-}
+//static void CreatePerson()
+//{
+//    Console.WriteLine("Podaj imię: ");
+//    string firstName = Console.ReadLine();
+//    Console.WriteLine("Podaj nazwisko: ");
+//    string lastName = Console.ReadLine();
+//    Console.WriteLine("Podaj wiek: ");
+//    int age = int.Parse(Console.ReadLine());
+//    Osoba osoba=new Osoba(firstName, lastName, age);
+//    osoba.View();
+//}
 
-static void CreateBankAccount()
-{
-    BankAccount konto = new BankAccount("Jan Kowalski", 1000);
-    konto.Wplata(500);
-    konto.View();
-    konto.Wyplata(200);
-    konto.View();
-    Console.WriteLine($"Saldo: {konto.Saldo}");
-}
+//static void CreateBankAccount()
+//{
+//    BankAccount konto = new BankAccount("Jan Kowalski", 1000);
+//    konto.Wplata(500);
+//    konto.View();
+//    konto.Wyplata(200);
+//    konto.View();
+//    Console.WriteLine($"Saldo: {konto.Saldo}");
+//}
 
-static void CreateStudent()
+//static void CreateStudent()
+//{
+//    Student student = new Student("Kamil", "Pawlak");
+//    student.DodajOcene(4.5);
+//    student.DodajOcene(3);
+//    Console.WriteLine(student.SredniaOcen);
+//}
+
+// ZADANIE 4
+static void CreateLicz()
 {
-    Student student = new Student("Kamil", "Pawlak");
-    student.DodajOcene(4.5);
-    student.DodajOcene(3);
-    Console.WriteLine(student.SredniaOcen);
+    Licz licz1 = new Licz(4);
+    licz1.Dodaj(5);
+    licz1.Odejmij(3);
+    licz1.GetValue();
+
+    Licz licz2 = new Licz(-6.5);
+    licz2.Dodaj(5);
+    licz2.Odejmij(0.33);
+    licz2.GetValue();
+
+    Licz licz3 = new Licz(0);
+    licz3.Dodaj(3);
+    licz3.Odejmij(3.01);
+    licz3.GetValue();
 }
+CreateLicz();
