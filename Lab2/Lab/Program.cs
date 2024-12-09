@@ -58,21 +58,34 @@
 //}
 
 // ZADANIE 4
-static void CreateLicz()
+//static void CreateLicz()
+//{
+//    Licz licz1 = new Licz(4);
+//    licz1.Dodaj(5);
+//    licz1.Odejmij(3);
+//    licz1.GetValue();
+
+//    Licz licz2 = new Licz(-6.5);
+//    licz2.Dodaj(5);
+//    licz2.Odejmij(0.33);
+//    licz2.GetValue();
+
+//    Licz licz3 = new Licz(0);
+//    licz3.Dodaj(3);
+//    licz3.Odejmij(3.01);
+//    licz3.GetValue();
+//}
+//CreateLicz();
+
+// ZADANIE 5
+static void CreateSumator()
 {
-    Licz licz1 = new Licz(4);
-    licz1.Dodaj(5);
-    licz1.Odejmij(3);
-    licz1.GetValue();
-
-    Licz licz2 = new Licz(-6.5);
-    licz2.Dodaj(5);
-    licz2.Odejmij(0.33);
-    licz2.GetValue();
-
-    Licz licz3 = new Licz(0);
-    licz3.Dodaj(3);
-    licz3.Odejmij(3.01);
-    licz3.GetValue();
+    Sumator sumator = new Sumator([1,2,3,4,5,6]);
+    Console.WriteLine($"Suma: {sumator.Suma()}");
+    Console.WriteLine($"Suma podzielnych /2: {sumator.SumaPodziel2()}");
+    Console.WriteLine($"Elementów: {sumator.IleElementow()}");
+    sumator.PrintAll();
+    sumator.PrintIndexRange(1,3);
+    sumator.PrintIndexRange(-1, 22);
 }
-CreateLicz();
+CreateSumator();

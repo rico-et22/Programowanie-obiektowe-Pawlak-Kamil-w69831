@@ -1,19 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Licz
+namespace Lab2
 {
-    private double value = 0;
-
-    public void Dodaj(double d) { value += d; }
-    public void Odejmij(double d) { value -= d; }
-
-    public void GetValue()
+    internal class Licz
     {
-        Console.WriteLine(value);
-    }
+        private double value = 0;
 
-    public Licz(double initialValue)
-	{
-        value = initialValue;
-	}
+        public void Dodaj(double d) { value += d; }
+        public void Odejmij(double d) { value -= d; }
+
+        public void GetValue()
+        {
+            Console.WriteLine(value);
+        }
+
+        public Licz(double initialValue)
+        {
+            value = initialValue;
+        }
+    }
 }
