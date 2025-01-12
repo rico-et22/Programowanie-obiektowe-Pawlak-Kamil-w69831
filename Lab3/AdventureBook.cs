@@ -14,5 +14,10 @@ namespace Lab3
         {
             this.topic = topic;
         }
+        public override void View()
+        {
+            base.View();
+            Console.WriteLine($"temat: {topic}");
+        }
     }
 }

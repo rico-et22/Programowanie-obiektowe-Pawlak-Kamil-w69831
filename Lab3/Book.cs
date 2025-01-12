@@ -19,7 +19,7 @@ namespace Lab3
             this.publishDate = publishDate;
         }
 
-        public void View()
+        public virtual void View()
         {
             Console.WriteLine($"Tytuł: {title}, Autor:");
             author.View();

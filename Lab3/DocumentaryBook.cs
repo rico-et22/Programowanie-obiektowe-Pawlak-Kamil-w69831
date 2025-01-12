@@ -13,5 +13,10 @@ namespace Lab3
         {
             this.geographicArea = geographicArea;
         }
+        public override void View()
+        {
+            base.View();
+            Console.WriteLine($"obszar geograficzny: {geographicArea}");
+        }
     }
 }

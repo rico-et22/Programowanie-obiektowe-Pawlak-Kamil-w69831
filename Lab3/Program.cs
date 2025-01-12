@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using Lab3;
-/* ZADANIE 1
+// ZADANIE 1
 
 // 1a
 Person author1 = new Person("Jan", "Kowalski", 22);
@@ -45,12 +45,16 @@ foreach (Person person in people)
     person.View();
 }
 
-*/
+// 1i 1j
+Book book4 = new AdventureBook("Książka testowa 4", author1, Convert.ToDateTime("2005-06-28"),"antyk");
+book4.View();
+Book book5 = new DocumentaryBook("Książka testowa 5", author2, Convert.ToDateTime("2006-06-28"), "Europa");
+book5.View();
 
 // ZADANIE 2
-Samochod car1 = new SamochodOsobowy();
-Samochod car2 = new Samochod();
-Samochod car3 = new Samochod("Audi", "A6", "sedan", "biały", 1995, 500000);
-car1.View();
-car2.View();
-car3.View();
+//Samochod car1 = new SamochodOsobowy();
+//Samochod car2 = new Samochod();
+//Samochod car3 = new Samochod("Audi", "A6", "sedan", "biały", 1995, 500000);
+//car1.View();
+//car2.View();
+//car3.View();
