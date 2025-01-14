@@ -1,81 +1,160 @@
-﻿
-//enum Kolor
-//{
-//    Czerwony, //0
-//    Zielony, //1
-//    Żółty, //2
-//    Niebieski = 10,
-//    Czarny //11
-//}
+﻿using System;
+// zadanie 1
 
-//class Program
-//{
-//    static void Main(string[] args)
-//    {
-//        Kolor mojKolor = Kolor.Czerwony;
-//        Console.WriteLine($"Wybrany kolor: {mojKolor}");
-//    }
-//}
-
-//class Program
-//{
-//    static void Main(string[] args)
-//    {
-//        try
-//        {
-//            Console.WriteLine("Podaj licznik:");
-//            int licznik = int.Parse(Console.ReadLine());
-//            Console.WriteLine("Podaj mianownik:");
-//            int mianownik = int.Parse(Console.ReadLine());
-
-//            int wynik = licznik / mianownik;
-//            Console.WriteLine($"Wynik dzielenia: {wynik}");
-//        }
-//        catch (DivideByZeroException ex)
-//        {
-//            Console.WriteLine("Nie można dzielić przez zero");
-//            Console.WriteLine(ex.Message);
-//        }
-//        catch (FormatException ex)
-//        {
-//            Console.WriteLine("Nieprawidłowy format danych");
-//            Console.WriteLine(ex.Message);
-//        }
-//        finally
-//        {
-//            Console.WriteLine("Wykonał się blok finally");
-//        }
-//    }
-//}
-
-class MojeWyjatki : Exception
+enum Operation
 {
-    public MojeWyjatki(string message) : base(message)
-    {
-
-    }
-
+    Add = 1,
+    Subtract,
+    Multiply,
+    Divide,
 }
 
 class Program
 {
-    static void Main(string[] args)
+    static double? Add(double a, double b)
     {
         try
         {
-            SprawdzLiczbe(-23);
+            return a + b;
         }
-        catch (MojeWyjatki e)
+        catch (FormatException ex) { Console.WriteLine("Nieprawidłowy format danych"); }
+        catch (Exception e)
         {
-            { Console.WriteLine(e.Message); }
+            Console.WriteLine(e.Message);
         }
+        return null;
+    }
+    static double? Subtract(double a, double b)
+    {
+        try
+        {
+            return a - b;
+        }
+        catch (FormatException ex) { Console.WriteLine("Nieprawidłowy format danych"); }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        return null;
+    }
+    static double? Multiply(double a, double b)
+    {
+        try
+        {
+            return a * b;
+        }
+        catch (FormatException ex) { Console.WriteLine("Nieprawidłowy format danych"); }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        return null;
+    }
+    static double? Divide(double a, double b)
+    {
+        try
+        {
+            if (b == 0) throw new DivideByZeroException();
+            return a / b;
+        }
+        catch (DivideByZeroException e)
+        {
+            Console.WriteLine("Nie można dzielić przez zero");
+        }
+        catch (FormatException ex) { Console.WriteLine("Nieprawidłowy format danych"); }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        return null;
+    }
+    static void Main(string[] args)
+    {
+        double? a = null, b = null;
+        Operation? selection = null;
+        List<double> results = new List<double>();
 
-        static void SprawdzLiczbe(int liczba)
+        do
         {
-            if (liczba <= 0)
+            do
             {
-                throw new MojeWyjatki("Liczba musi byc wieksza od zera!");
+                if (results.Count > 0)
+                {
+                    Console.WriteLine("Historia:");
+                    results.ForEach(r => Console.WriteLine(r.ToString()));
+                }
+                Console.WriteLine("Podaj typ operacji:");
+                Console.WriteLine("1- dodawanie:");
+                Console.WriteLine("2- odejmowanie");
+                Console.WriteLine("3- mnożenie");
+                Console.WriteLine("4- dzielenie");
+                Console.WriteLine("0- zakończ");
+
+                try
+                {
+                    int input = int.Parse(Console.ReadLine());
+                    if (input == 0) return;
+                    if (Enum.IsDefined(typeof(Operation), input)) selection = (Operation)input;
+                    else Console.WriteLine("Nieprawidłowy wybór");
+                }
+                catch (FormatException ex) { Console.WriteLine("Nieprawidłowy format danych"); }
+                catch (Exception ex) { Console.WriteLine(ex.Message); };
+            } while (selection == null);
+
+            do
+            {
+                Console.WriteLine("Podaj a:");
+                try
+                {
+                    a = double.Parse(Console.ReadLine());
+                }
+                catch (FormatException ex) { Console.WriteLine("Nieprawidłowy format danych"); }
+                catch (Exception ex) { Console.WriteLine(ex.Message); };
+            } while (a == null);
+
+            do
+            {
+                Console.WriteLine("Podaj b:");
+                try
+                {
+                    b = double.Parse(Console.ReadLine());
+                }
+                catch (FormatException ex) { Console.WriteLine("Nieprawidłowy format danych"); }
+                catch (Exception ex) { Console.WriteLine(ex.Message); };
+            } while (b == null);
+
+            if (selection.HasValue && a != null && b != null)
+            {
+                double? result;
+                try
+                {
+                    switch (selection)
+                    {
+                        case Operation.Add:
+                            result = Add((double)a, (double)b);
+                            break;
+                        case Operation.Subtract:
+                            result = Subtract((double)a, (double)b);
+                            break;
+                        case Operation.Multiply:
+                            result = Multiply((double)a, (double)b);
+                            break;
+                        case Operation.Divide:
+                            result = Divide((double)a, (double)b);
+                            break;
+                        default: throw new ArgumentOutOfRangeException();
+                    }
+                }
+                catch (Exception ex) { result = null; Console.WriteLine(ex.Message); };
+                if (result.HasValue)
+                {
+                    Console.WriteLine($"{result.Value}");
+                    results.Add(result.Value);
+                }
             }
-        }
+            selection = null;
+            a = null;
+            b = null;
+        } while (true);
     }
 }
