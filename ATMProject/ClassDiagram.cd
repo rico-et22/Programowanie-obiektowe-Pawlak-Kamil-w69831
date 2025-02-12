@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ATMProject.AmexCard">
+    <Position X="8" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AmexCard.cs</FileName>
+      <NewMemberFileName>Program.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATMProject.ATM">
+    <Position X="21.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AECAQAAAAAAAAAAAAAAABgAAAAAAAAAAAAARAAAAAAA=</HashCode>
+      <FileName>ATM.cs</FileName>
+      <NewMemberFileName>Program.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATMProject.DatabaseManager">
+    <Position X="15" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAEAAAAgAIAAAAAAAQAkAAAQAAACAAAAAAAA=</HashCode>
+      <FileName>DatabaseManager.cs</FileName>
+      <NewMemberFileName>User.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ATMProject.PaymentCard">
+    <Position X="10.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAEAQAAGAAAAAAAAAAAAAAAAgAAAAAAAACAAEA=</HashCode>
+      <FileName>PaymentCard.cs</FileName>
+      <NewMemberFileName>Program.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATMProject.Program">
+    <Position X="15" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATMProject.User">
+    <Position X="18" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>User.cs</FileName>
+      <NewMemberFileName>Program.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATMProject.VisaCard">
+    <Position X="11.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VisaCard.cs</FileName>
+      <NewMemberFileName>Program.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATMProject.Mastercard">
+    <Position X="13.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mastercard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATMProject.VisaElectronCard">
+    <Position X="9.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VisaElectronCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATMProject.Account">
+    <Position X="23.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATMProject.Transaction">
+    <Position X="23.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAACAAAACAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Transaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATMProject.CashReserve">
+    <Position X="21.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAEAAAAAAAAAAAAAAAAIAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>CashReserve.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATMProject.Customer">
+    <Position X="19.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATMProject.Administrator">
+    <Position X="16.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAACAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Administrator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ATMProject.IDataAccess">
+    <Position X="15" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAEAAAAAAIAAAAAAAQAkAAAQAAACAAAAAAAA=</HashCode>
+      <FileName>DatabaseManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
