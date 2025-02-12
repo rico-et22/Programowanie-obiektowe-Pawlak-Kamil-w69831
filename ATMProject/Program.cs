@@ -29,7 +29,7 @@ namespace ATMProject
                 {
                     case "1":
                         Console.Write("Podaj numer karty: ");
-                        string cardNumber = Console.ReadLine();
+                        string cardNumber = Console.ReadLine().Replace(' ', '-');
                         PaymentCard card = dbManager.GetCardByNumber(cardNumber);
                         if (card == null)
                         {
