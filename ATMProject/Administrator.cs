@@ -27,7 +27,7 @@ namespace ATMProject
             while (!exit)
             {
                 Console.WriteLine("\n=== Panel Administratora ===");
-                Console.WriteLine("0. Zmiana ustawień administratora (hasło)");
+                Console.WriteLine("0. Zmiana hasła administratora");
                 Console.WriteLine("1. Zmiana salda gotówki bankomatu");
                 Console.WriteLine("2. Generowanie historii wypłat");
                 Console.WriteLine("3. Wyświetlenie zapasów gotówki");
